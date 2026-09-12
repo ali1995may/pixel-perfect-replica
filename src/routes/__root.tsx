@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "ABINADER – Consultants and Services LLC | Lebanese Legal Consultancy" },
+      { name: "description", content: "Expert consultancy support on Lebanese and international laws for the Lebanese diaspora in Florida." },
+      { name: "author", content: "ABINADER Consultants and Services LLC" },
+      { property: "og:title", content: "ABINADER – Consultants and Services LLC" },
+      { property: "og:description", content: "Expert consultancy support on Lebanese and international laws for the Lebanese diaspora in Florida." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@abinaderconsultants" },
     ],
     links: [
       {
