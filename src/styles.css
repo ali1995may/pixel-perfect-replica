@@ -142,3 +142,107 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== ABINADER site design system ===== */
+@font-face {
+  font-family: "Ananda";
+  src: url("/__l5e/assets-v1/ca184dcb-5a9a-4d84-afaa-c60d94d6e6e1/Ananda-Black-Personal-Use.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@theme inline {
+  --color-navy: #010136;
+  --color-gold: #cca876;
+  --color-gold-dark: #b8905c;
+  --color-cream: #f8f2ec;
+  --color-body: #54595f;
+  --font-sans: "Source Sans 3", "Source Sans Pro", sans-serif;
+  --font-script: "Ananda", cursive;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-body);
+  }
+}
+
+@utility nav-link {
+  font-size: 16px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--color-gold);
+  }
+}
+
+@utility mobile-link {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 16px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--color-gold);
+  }
+}
+
+@utility footer-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+@utility footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--color-gold);
+  }
+}
+
+@utility hero-mask {
+  isolation: isolate;
+}
+
+@utility lady-justice {
+  width: 100%;
+  height: 100%;
+  opacity: 0.06;
+  background: no-repeat center / contain;
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-ken-burns {
+  animation: ken-burns 9s ease-out forwards;
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.9s ease-out both;
+}
