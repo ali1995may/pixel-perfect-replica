@@ -13,7 +13,7 @@ export const Route = createFileRoute("/service/$slug")({
   head: ({ loaderData }) => {
     const s = loaderData?.service;
     const title = s ? `${s.heroTitle.join(" ")} | ABINADER Consultants` : "ABINADER Consultants";
-    const description = s?.paragraphs[0].slice(0, 155) ?? "";
+    const description = s?.paragraphs[0]?.slice(0, 155) ?? "";
     return {
       meta: [
         { title },
