@@ -29,18 +29,26 @@ export function HeroSlider() {
 
       <div className="relative mx-auto flex h-full max-w-[1440px] items-center px-6">
         <div key={i} className="max-w-3xl animate-fade-up">
-          <p className="font-script text-[34px] leading-none text-gold md:text-[42px]">
-            {slides[i].eyebrow}
-            <img src={A.quill} alt="" className="ml-2 inline-block h-8 w-auto align-middle" />
-          </p>
-          <h1 className="mt-4 text-[32px] font-bold leading-[1.25] tracking-[1px] text-white md:text-[40px]">
-            <span className="text-gold">{slides[i].highlight}</span>{" "}
-            {slides[i].lines.map((l, k) => (
-              <span key={k} className="block">
-                {l}
-              </span>
-            ))}
-          </h1>
+          {(() => {
+            const slide = slides[i];
+            if (!slide) return null;
+            return (
+              <>
+                <p className="font-script text-[34px] leading-none text-gold md:text-[42px]">
+                  {slide.eyebrow}
+                  <img src={A.quill} alt="" className="ml-2 inline-block h-8 w-auto align-middle" />
+                </p>
+                <h1 className="mt-4 text-[32px] font-bold leading-[1.25] tracking-[1px] text-white md:text-[40px]">
+                  <span className="text-gold">{slide.highlight}</span>{" "}
+                  {slide.lines.map((l, k) => (
+                    <span key={k} className="block">
+                      {l}
+                    </span>
+                  ))}
+                </h1>
+              </>
+            );
+          })()}
         </div>
       </div>
 
